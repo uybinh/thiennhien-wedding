@@ -6,11 +6,33 @@ body {
   margin: 0;
   padding: 0;
 }
-
+/* Main hero section */
 .hero {
   height: 100vh;
 }
 
+/* Parallax effect settings for main hero section */
+
+.main {
+  height: 100vh;
+  perspective: 2px;
+  overflow-x: hidden; /* must have overflow-x for the parallax effect to work */
+}
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+}
 .section {
   display: block;
 }
@@ -18,7 +40,7 @@ body {
 .important {
   height: 300px;
   width: 300px;
-  background: gray;
+  /* background: gray; */
 }
 
 .absolute-center {
@@ -28,6 +50,13 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+/* style for 'story section' */
+
+.story {
+  height: 100vh;
+  background: #F7E3E7;
 }
 
 /* style for pictures gallery */
@@ -54,6 +83,15 @@ figure {
   width: 100%;
 }
 
+
+
+/* Background images */
 .img-1 {
-  background: url("http://mcard.barunnfamily.com/Photos/201807/B2643939/6154475d-4e61-4860-8328-ad8b50c74acf.png")
+  background: url("")
+}
+
+.img-main-section::after {
+  background: url("images/banh-cuoi.jpg");
+  background-position: center bottom;
+  background-size: cover;
 }
