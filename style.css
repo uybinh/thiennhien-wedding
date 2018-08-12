@@ -9,17 +9,23 @@ body {
 /* Main hero section */
 .hero {
   height: 100vh;
+  text-align: center;
+  color: white;
 }
 
 /* Parallax effect settings for main hero section */
 
 .main {
   height: 100vh;
-  perspective: 2px;
+          perspective: 200px;
+  -webkit-perspective: 200px;
+      -ms-perspective: 200px;
+     -moz-perspective: 200px;
   overflow-x: hidden; /* must have overflow-x for the parallax effect to work */
+  overflow-y: auto;
 }
 .parallax {
-  position: relative;
+  /* position: relative; if set this the parallax effect won't work on safari */
   overflow: hidden;
 }
 
@@ -30,7 +36,10 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translateZ(-1px) scale(1.5);
+          transform: translateZ(-100px) scale(1.5);
+  -webkit-transform: translateZ(-100px) scale(1.5);
+     -moz-transform: translateZ(-100px) scale(1.5);
+      -ms-transform: translateZ(-100px) scale(1.5);
   z-index: -1;
 }
 .section {
