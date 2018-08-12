@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  height: 100vh;
+}
+
+.section {
+  display: block;
+}
+
+.important {
+  height: 300px;
+  width: 300px;
+  background: gray;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* style for pictures gallery */
+.gallery {
+  padding: 5px;
+  overflow: auto;
+}
+
+.gallery figure a {
+  display: block;  /* to wrap around the img tag and take up all height */
+  background-position: center bottom;
+  background-size: cover; /* to fit the background to cover all the element */
+  border-radius: 5px;
+}
+
+figure {
+  float: left;
+  width: calc(100%/3);
+  padding: 5px;
+  margin: 0;
+}
+
+.img-frame {
+  width: 100%;
+}
+
+.img-1 {
+  background: url("http://mcard.barunnfamily.com/Photos/201807/B2643939/6154475d-4e61-4860-8328-ad8b50c74acf.png")
+}
