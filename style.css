@@ -1,10 +1,33 @@
+/* Background images */
+.img-1 {
+  background: url("")
+}
+
+.img-main-section::after {
+  background: url("images/banh-cuoi.jpg");
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.img-nhien-avatar {
+  background: url('images/nhien-avatar.jpg');
+}
+
+.img-thien-avatar {
+  background: url('images/thien-avatar.jpg');
+}
+
+/* general rules */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 /* Main hero section */
 .hero {
@@ -13,8 +36,16 @@ body {
   color: white;
 }
 
-/* Parallax effect settings for main hero section */
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Galada', cursive;
+}
 
+.hero p {
+  font-size: 2rem;
+}
+
+/* Parallax effect settings for main hero section */
 .main {
   height: 100vh;
           perspective: 200px;
@@ -24,6 +55,14 @@ body {
   overflow-x: hidden; /* must have overflow-x for the parallax effect to work */
   overflow-y: auto;
 }
+
+.important {
+  height: 200px;
+  max-width: 600px;
+  background: rgba(199, 84, 141, 0.418);
+  padding: 2rem 0;
+}
+
 .parallax {
   /* position: relative; if set this the parallax effect won't work on safari */
   overflow: hidden;
@@ -46,12 +85,6 @@ body {
   display: block;
 }
 
-.important {
-  height: 300px;
-  width: 300px;
-  /* background: gray; */
-}
-
 .absolute-center {
   position: absolute;
   top: 0;
@@ -62,10 +95,41 @@ body {
 }
 
 /* style for 'story section' */
-
 .story {
   height: 100vh;
   background: #F7E3E7;
+  background: radial-gradient(ellipse at top center, rgb(255, 234, 238) , #F7E3E7 )
+}
+
+/* avatar facebook on story section */
+.avatars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+@media (max-width: 576px){
+  .avatars {
+    flex-direction: column;
+  }
+}
+
+.fb-avatar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 1px 1px rgba(58, 58, 58, 0.336),
+              0 0 2px 3px rgba(58, 58, 58, 0.13);
+  background-size: cover;
 }
 
 /* style for pictures gallery */
@@ -90,17 +154,4 @@ figure {
 
 .img-frame {
   width: 100%;
-}
-
-
-
-/* Background images */
-.img-1 {
-  background: url("")
-}
-
-.img-main-section::after {
-  background: url("images/banh-cuoi.jpg");
-  background-position: center bottom;
-  background-size: cover;
 }
