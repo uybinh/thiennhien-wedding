@@ -103,20 +103,11 @@ body {
 
 /* avatar facebook on story section */
 .avatars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
   max-width: 600px;
   margin: auto;
   padding: 10px;
 }
 
-@media (max-width: 576px){
-  .avatars {
-    flex-direction: column;
-  }
-}
 
 .fb-avatar {
   display: inline-block;
@@ -130,6 +121,29 @@ body {
   box-shadow: 0 0 1px 1px rgba(58, 58, 58, 0.336),
               0 0 2px 3px rgba(58, 58, 58, 0.13);
   background-size: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col {
+  justify-self: center;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-4 {
+  grid-column: span 4;
+}
+
+@media (max-width: 576px){
+  .col-sm-12 {
+    grid-column: span 12;
+  }
 }
 
 /* style for pictures gallery */
