@@ -179,7 +179,18 @@ p {
 }
 
 .story {
+  text-align: center;
 }
+
+.story div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-size: 3rem;
+  color: rgb(255, 98, 125);
+}
+
 /* avatar facebook on story section */
 .avatars {
   max-width: 600px;
@@ -211,6 +222,9 @@ p {
   justify-self: center;
 }
 
+.col-12 {
+  grid-column: span 12;
+}
 .col-6 {
   grid-column: span 6;
 }
