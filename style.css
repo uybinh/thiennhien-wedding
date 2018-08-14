@@ -167,27 +167,15 @@ p {
 }
 
 @keyframes beating {
-  from {
-    font-size: 3rem;
-  }
-  50% {
-    font-size: 4rem;
-  }
-  to {
-    font-size: 3rem;
-  }
+  0% { font-size: 3rem; }
+  50% { font-size: 4rem; }
+  100% { font-size: 3rem; }
 }
 
 @-webkit-keyframes beating {
-  from {
-    font-size: 3rem;
-  }
-  50% {
-    font-size: 4rem;
-  }
-  to {
-    font-size: 3rem;
-  }
+  0% { font-size: 3rem; }
+  50% { font-size: 4rem; }
+  100% { font-size: 3rem; }
 }
 
 .story div.icon {
