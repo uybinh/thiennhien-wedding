@@ -167,25 +167,25 @@ p {
 }
 
 @keyframes beating {
-  0% {
+  from {
     font-size: 3rem;
   }
   50% {
     font-size: 4rem;
   }
-  100% {
+  to {
     font-size: 3rem;
   }
 }
 
 @-webkit-keyframes beating {
-  0% {
+  from {
     font-size: 3rem;
   }
   50% {
     font-size: 4rem;
   }
-  100% {
+  to {
     font-size: 3rem;
   }
 }
@@ -198,8 +198,8 @@ p {
   padding: 40px;
   font-size: 3rem;
   color: rgb(255, 98, 125);
-  animation: .7s ease-out infinite beating;
-  -webkit-animation: .7s ease-out infinite beating;
+  animation: beating .7s ease-out infinite;
+  -webkit-animation: beating .7s ease-out infinite;
 }
 
 
