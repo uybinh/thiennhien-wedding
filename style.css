@@ -46,6 +46,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -165,18 +166,37 @@ p {
   background-size: cover;
 }
 
+@keyframes beating {
+  0% {
+    font-size: 3rem;
+  }
+  50% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+
 .story div.icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 8rem;
   padding: 40px;
   font-size: 3rem;
   color: rgb(255, 98, 125);
+  animation-name: beating;
+  animation-duration: .7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
 }
+
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
 }
 
 [class^="col-"] {
