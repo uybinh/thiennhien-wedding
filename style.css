@@ -178,18 +178,6 @@ p {
   }
 }
 
-@-webkit-keyframes beating {
-  0% {
-    font-size: 3rem;
-  }
-  50% {
-    font-size: 4rem;
-  }
-  100% {
-    font-size: 3rem;
-  }
-}
-
 .story div.icon {
   display: flex;
   align-items: center;
