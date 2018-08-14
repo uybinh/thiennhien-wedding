@@ -1,10 +1,47 @@
 /* Background images */
 .img-1 {
-  background: url("")
+  background: url("images/img-1.jpg");
+}
+
+.img-2 {
+  background: url("images/img-2.jpg");
+}
+
+.img-3 {
+  background: url("images/img-3.jpg");
+}
+
+.img-4 {
+  background: url("images/img-4.jpg");
+}
+
+.img-5 {
+  background: url("images/img-5.jpg");
+}
+
+.img-6 {
+  background: url("images/img-6.jpg");
+}
+.img-7 {
+  background: url("images/img-7.jpg");
+}
+
+.img-8 {
+  background: url("images/img-8.jpg");
+}
+
+.img-9 {
+  background: url("images/img-9.jpg");
 }
 
 .img-main-section::after {
-  background: url("images/banh-cuoi.jpg");
+  background: url("images/full-bg.jpg");
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.img-parallax-2::after {
+  background: url("images/full-bg-2.jpg");
   background-position: center bottom;
   background-size: cover;
 }
@@ -27,7 +64,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 /* Main hero section */
 .hero {
@@ -36,16 +73,47 @@ body {
   color: white;
 }
 
-.hero h1 {
+h1 {
   font-size: 3rem;
+  font-family: 'Galada', cursive;
+  margin-top: 10px;
+}
+
+h2 {
   font-family: 'Galada', cursive;
 }
 
-.hero p {
-  font-size: 2rem;
+.hero .special {
+  text-shadow:  0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25),
+                0 10px 10px rgba(0,0,0,.2),
+                0 20px 20px rgba(0,0,0,.15);
 }
 
-/* Parallax effect settings for main hero section */
+
+
+
+
+h1.low {
+  color: rgba(255, 255, 255, .75);
+  font-size: 2rem;
+  letter-spacing: .35rem;
+}
+
+p {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.452);
+}
+
+/* Parallax efect settings for main hero section */
 .main {
   height: 100vh;
           perspective: 200px;
@@ -56,16 +124,33 @@ body {
   overflow-y: auto;
 }
 
+.absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 100px;
+}
+
 .important {
   height: 200px;
   max-width: 600px;
-  background: rgba(199, 84, 141, 0.418);
   padding: 2rem 0;
+}
+
+.hero p {
+  font-weight: 100;
 }
 
 .parallax {
   /* position: relative; if set this the parallax effect won't work on safari */
   overflow: hidden;
+}
+
+.full-height {
+  height: 100vh;
 }
 
 .parallax::after {
@@ -82,32 +167,26 @@ body {
   z-index: -1;
 }
 .section {
-  display: block;
+  /* display: block; */
+  position: relative;
 }
 
-.absolute-center {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
 
 /* style for 'story section' */
-.story {
-  height: 100vh;
-  background: #F7E3E7;
-  background: radial-gradient(ellipse at top center, rgb(255, 234, 238) , #F7E3E7 )
+.blue-gradient {
+  background: rgb(152, 240, 255);
+  background: radial-gradient(ellipse at top center, rgb(250, 254, 255) , rgb(219, 250, 255) )
 }
 
+.story {
+}
 /* avatar facebook on story section */
 .avatars {
   max-width: 600px;
   margin: auto;
-  padding: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-
 
 .fb-avatar {
   display: inline-block;
@@ -148,7 +227,6 @@ body {
 
 /* style for pictures gallery */
 .gallery {
-  padding: 5px;
   overflow: auto;
 }
 
@@ -156,16 +234,35 @@ body {
   display: block;  /* to wrap around the img tag and take up all height */
   background-position: center bottom;
   background-size: cover; /* to fit the background to cover all the element */
-  border-radius: 5px;
+  transition: all ease-out 0.3s;
+}
+
+.gallery figure a:hover {
+  transform: scale(1.1);
 }
 
 figure {
   float: left;
   width: calc(100%/3);
-  padding: 5px;
   margin: 0;
+  overflow: hidden;
 }
 
 .img-frame {
   width: 100%;
+}
+
+/* style for date section */
+.dates {
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: rgb(4, 136, 136);
+  text-align: center;
+}
+
+.date {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
