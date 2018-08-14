@@ -178,6 +178,18 @@ p {
   }
 }
 
+@-webkit-keyframes beating {
+  0% {
+    font-size: 3rem;
+  }
+  50% {
+    font-size: 4rem;
+  }
+  100% {
+    font-size: 3rem;
+  }
+}
+
 .story div.icon {
   display: flex;
   align-items: center;
@@ -186,10 +198,8 @@ p {
   padding: 40px;
   font-size: 3rem;
   color: rgb(255, 98, 125);
-  animation-name: beating;
-  animation-duration: .7s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
+  animation: .7s ease-out infinite beating;
+  -webkit-animation: .7s ease-out infinite beating;
 }
 
 
