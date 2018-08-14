@@ -34,18 +34,6 @@
   background: url("images/img-9.jpg");
 }
 
-.img-main-section::after {
-  background: url("images/full-bg.jpg");
-  background-position: center bottom;
-  background-size: cover;
-}
-
-.img-parallax-2::after {
-  background: url("images/full-bg-2.jpg");
-  background-position: center bottom;
-  background-size: cover;
-}
-
 .img-nhien-avatar {
   background: url('images/nhien-avatar.jpg');
 }
@@ -54,11 +42,10 @@
   background: url('images/thien-avatar.jpg');
 }
 
-/* general rules */
+
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
@@ -67,71 +54,65 @@ body {
   font-family: 'Nunito', sans-serif;
   color: rgb(65, 65, 65);
 }
-/* Main hero section */
+
+.main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  /* height: 100vh; */
+}
+
+section:not(.parallax) {
+  background-color: white;
+}
+
+section.parallax {
+  height: 100vh;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* increase the height to avoid white background */
+/*   height: 200%; */
+  /* Force the background image to fill the whole element. */
+  background-size: cover;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+.bg1::after {
+  background: url("images/full-bg.jpg");
+  background-position: center bottom;
+}
+
+.bg2::after {
+  background: url("images/full-bg-2.jpg");
+  background-position: center bottom;
+}
+
+/* main hero section */
 .hero {
   height: 100vh;
   text-align: center;
   color: white;
 }
-
-h1 {
-  font-size: 3rem;
-  /* font-family: 'Tangerine', cursive; */
-  font-family: 'Meddon', cursive;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 576px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-}
-
-h2 {
-  /* font-family: 'Tangerine', cursive; */
-  font-family: 'Meddon', cursive;
-}
-
-.hero .special {
-  text-shadow:  0 1px 0 #ccc,
-                0 2px 0 #c9c9c9,
-                0 3px 0 #bbb,
-                0 4px 0 #b9b9b9,
-                0 5px 0 #aaa,
-                0 6px 1px rgba(0,0,0,.1),
-                0 0 5px rgba(0,0,0,.1),
-                0 1px 3px rgba(0,0,0,.3),
-                0 3px 5px rgba(0,0,0,.2),
-                0 5px 10px rgba(0,0,0,.25),
-                0 10px 10px rgba(0,0,0,.2),
-                0 20px 20px rgba(0,0,0,.15);
-}
-
-h1.low {
-  color: rgba(255, 255, 255, .75);
-  font-size: 2rem;
-  letter-spacing: .35rem;
-}
-
-p {
-  font-size: 1.2em;
-}
-
-.hero p {
-  opacity: .4;
-}
-/* Parallax efect settings for main hero section */
-.main {
-  height: 100vh;
-          perspective: 200px;
-  -webkit-perspective: 200px;
-      -ms-perspective: 200px;
-     -moz-perspective: 200px;
-  overflow-x: hidden; /* must have overflow-x for the parallax effect to work */
-  overflow-y: auto;
-}
-
 .absolute-center {
   position: absolute;
   top: 0;
@@ -148,52 +129,41 @@ p {
   padding: 2rem 0;
 }
 
-.parallax {
-  /* position: relative; if set this the parallax effect won't work on safari */
-  overflow: hidden;
+h1 {
+  font-size: 3rem;
+  /* font-family: 'Tangerine', cursive; */
+  font-family: 'Meddon', cursive;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+h1.low {
+  color: rgba(255, 255, 255, .75);
+  font-size: 2rem;
+  letter-spacing: .35rem;
+}
+
+h2 {
+  /* font-family: 'Tangerine', cursive; */
+  font-family: 'Meddon', cursive;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+.hero p {
+  opacity: .4;
 }
 
 .full-height {
   height: 100vh;
-}
-
-.parallax::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-          transform: translateZ(-100px) scale(1.5);
-  -webkit-transform: translateZ(-100px) scale(1.5);
-     -moz-transform: translateZ(-100px) scale(1.5);
-      -ms-transform: translateZ(-100px) scale(1.5);
-  z-index: -1;
-}
-.section {
-  /* display: block; */
-  position: relative;
-  overflow: hidden;
-}
-
-
-/* style for 'story section' */
-.blue-gradient {
-  background: rgb(152, 240, 255);
-  background: radial-gradient(ellipse at top center, rgb(250, 254, 255) , rgb(219, 250, 255) )
-}
-
-.story {
-  text-align: center;
-}
-
-.story div.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  font-size: 3rem;
-  color: rgb(255, 98, 125);
 }
 
 /* avatar facebook on story section */
@@ -227,9 +197,6 @@ p {
   justify-self: center;
 }
 
-.col-12 {
-  grid-column: span 12;
-}
 .col-6 {
   grid-column: span 6;
 }
