@@ -65,6 +65,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
+  color: rgb(65, 65, 65);
 }
 /* Main hero section */
 .hero {
@@ -75,12 +76,21 @@ body {
 
 h1 {
   font-size: 3rem;
-  font-family: 'Galada', cursive;
+  /* font-family: 'Tangerine', cursive; */
+  font-family: 'Meddon', cursive;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.2rem;
+  }
 }
 
 h2 {
-  font-family: 'Galada', cursive;
+  /* font-family: 'Tangerine', cursive; */
+  font-family: 'Meddon', cursive;
 }
 
 .hero .special {
@@ -98,10 +108,6 @@ h2 {
                 0 20px 20px rgba(0,0,0,.15);
 }
 
-
-
-
-
 h1.low {
   color: rgba(255, 255, 255, .75);
   font-size: 2rem;
@@ -109,10 +115,12 @@ h1.low {
 }
 
 p {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.452);
+  font-size: 1.2em;
 }
 
+.hero p {
+  opacity: .4;
+}
 /* Parallax efect settings for main hero section */
 .main {
   height: 100vh;
@@ -140,10 +148,6 @@ p {
   padding: 2rem 0;
 }
 
-.hero p {
-  font-weight: 100;
-}
-
 .parallax {
   /* position: relative; if set this the parallax effect won't work on safari */
   overflow: hidden;
@@ -169,6 +173,7 @@ p {
 .section {
   /* display: block; */
   position: relative;
+  overflow: hidden;
 }
 
 
@@ -272,7 +277,6 @@ figure {
   margin: auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  color: rgb(4, 136, 136);
   text-align: center;
 }
 
