@@ -166,7 +166,22 @@ p {
   height: 100vh;
 }
 
+/* corner flower */
+.corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: url("images/corner.jpg");
+  background-size: cover;
+  z-index: -1;
+}
 /* avatar facebook on story section */
+.story {
+  padding-bottom: 100px;
+}
+
 .avatars {
   max-width: 600px;
   margin: auto;
@@ -178,7 +193,7 @@ p {
   display: inline-block;
   width: 100px;
   height: 100px;
-  margin: 20px;
+  margin: 20px
   text-align: center;
   line-height: 100px;
   border-radius: 50%;
@@ -186,6 +201,15 @@ p {
   box-shadow: 0 0 1px 1px rgba(58, 58, 58, 0.336),
               0 0 2px 3px rgba(58, 58, 58, 0.13);
   background-size: cover;
+}
+
+.story div.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  font-size: 3rem;
+  color: rgb(255, 98, 125);
 }
 
 .grid {
@@ -250,16 +274,4 @@ figure {
 .date {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-/* corner flower */
-.corner {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background: url("images/corner.jpg");
-  background-size: cover;
-  z-index: -1;
 }
