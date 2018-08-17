@@ -93,11 +93,17 @@ body {
 }
 
 h1 {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 3rem;
   /* font-family: 'Tangerine', cursive; */
   font-family: 'Meddon', cursive;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: .25s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 @media (max-width: 576px) {
@@ -110,6 +116,7 @@ h1.low {
   /* color: rgba(255, 255, 255, .75); */
   font-size: 2rem;
   letter-spacing: .35rem;
+
 }
 
 h2 {
@@ -125,8 +132,44 @@ p {
   opacity: .7;
 }
 
+.complementary {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  animation-name: fade-up-in;
+  animation-duration: .7s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
 .full-height {
   height: 100vh;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up-in {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 /* corner flower */

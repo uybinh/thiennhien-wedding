@@ -48,15 +48,14 @@ var openPhotoSwipe = function(index) {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#btn').addEventListener("click", () => {
-    openPhotoSwipe(1)
-  })
-
   let images = document.querySelectorAll(".gallery a[class^='img']")
   images.forEach((image, index) => {
-    image.addEventListener('click', (event) => {
+    image.onclick = (event) => {
       event.preventDefault()
       openPhotoSwipe(index)
-    })
+    }
   })
+
+  let title = document.querySelector('.special')
+  title.classList.toggle('fade-in')
 })
