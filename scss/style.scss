@@ -1,45 +1,45 @@
 /* Background images */
 .img-1 {
-  background: url("images/img-1.jpg");
+  background: url("../images/img-1.jpg");
 }
 
 .img-2 {
-  background: url("images/img-2.jpg");
+  background: url("../images/img-2.jpg");
 }
 
 .img-3 {
-  background: url("images/img-3.jpg");
+  background: url("../images/img-3.jpg");
 }
 
 .img-4 {
-  background: url("images/img-4.jpg");
+  background: url("../images/img-4.jpg");
 }
 
 .img-5 {
-  background: url("images/img-5.jpg");
+  background: url("../images/img-5.jpg");
 }
 
 .img-6 {
-  background: url("images/img-6.jpg");
+  background: url("../images/img-6.jpg");
 }
 .img-7 {
-  background: url("images/img-7.jpg");
+  background: url("../images/img-7.jpg");
 }
 
 .img-8 {
-  background: url("images/img-8.jpg");
+  background: url("../images/img-8.jpg");
 }
 
 .img-9 {
-  background: url("images/img-9.jpg");
+  background: url("../images/img-9.jpg");
 }
 
 .img-nhien-avatar {
-  background: url('images/nhien-avatar.jpg');
+  background: url('../images/nhien-avatar.jpg');
 }
 
 .img-thien-avatar {
-  background: url('images/thien-avatar.jpg');
+  background: url('../images/thien-avatar.jpg');
 }
 
 
@@ -148,6 +148,7 @@ p {
   height: 100vh;
 }
 
+/* animation for h1 */
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -161,6 +162,7 @@ p {
   }
 }
 
+/* animation for .complementary */
 @keyframes fade-up-in {
   0% {
     top: 50px;
@@ -273,17 +275,15 @@ p {
 /* style for pictures gallery */
 .gallery {
   overflow: auto;
-}
-
-.gallery figure a {
-  display: block;  /* to wrap around the img tag and take up all height */
-  background-position: center bottom;
-  background-size: cover; /* to fit the background to cover all the element */
-  transition: all ease-out 0.3s;
-}
-
-.gallery figure a:hover {
-  transform: scale(1.1);
+  figure a {
+    display: block;  /* to wrap around the img tag and take up all height */
+    background-position: center bottom;
+    background-size: cover; /* to fit the background to cover all the element */
+    transition: all ease-out 0.3s;
+  }
+  figure a:hover {
+    transform: scale(1.1);
+  }
 }
 
 figure {
